@@ -76,8 +76,8 @@ public class DungeonHandler {
     }
 
     public static void checkForDungeonCleared(String scoreline) {
-        if (scoreline.toLowerCase().trim().contains("dungeon cleared:")) {
-            String dungeonClearedText = scoreline.toLowerCase().trim().replace("dungeon cleared:", "").replace(" ", "").replace("%", "");
+        if (scoreline.toLowerCase().trim().contains("cleared:")) {
+            String dungeonClearedText = scoreline.toLowerCase().trim().replace("cleared:", "").replace(" ", "").replace("%", "");
             try {
                 dungeonCleared = Integer.parseInt(dungeonClearedText);
             } catch (NumberFormatException ignored) {}
